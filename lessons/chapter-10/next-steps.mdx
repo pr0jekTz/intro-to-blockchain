@@ -1,0 +1,182 @@
+---
+id: "10.6"
+title: "Next Steps"
+chapter: 10
+chapterTitle: "Continuing the Journey"
+slug: "next-steps"
+order: 6
+estimatedMinutes: 14
+previousLesson: "resource-links"
+nextLesson: null
+---
+
+**Next Steps Checklist:** (to wrap up, here’s a quick actionable list)
+
+- Set up a crypto wallet (if you haven’t already) – try a small test transaction.
+
+- Explore a blockchain explorer (like Etherscan) – look up a transaction and understand the fields.
+
+- Enroll in one of the free courses or watch a recommended video series.
+
+- Join one community (Discord/Reddit/Telegram) and introduce yourself.
+
+- If inclined, write a short blog or social post summarizing something you learned – teaching others solidifies your own understanding.
+
+- Think of a small project (technical or otherwise) and try it: e.g., write a paper on a blockchain topic for class, or code a simple smart contract that does something neat.
+
+- Stay curious and careful: keep learning, but also practice security habits as you engage.
+
+Web3 is a frontier – but you are now well-equipped with a map of the terrain and tools to navigate it. The rest is up to your initiative and creativity. Happy exploring\!
+
+# **Appendix A: Glossary of Key Terms**
+
+(Quick reference definitions of many terms used throughout the course, in alphabetical order for convenience.)
+
+- **51% Attack:** When a single entity gains majority control of a blockchain’s mining or validation power, allowing them to manipulate transactions (like double-spending or blocking others’ transactions). A risk on smaller blockchains.
+
+- **Address:** A blockchain account identifier (derived from a public key). It’s the string you share to receive funds. Example: `0x1234...` is an Ethereum address.
+
+- **Airdrop:** A distribution of free tokens to users, often as a promotion or reward. Sometimes based on snapshots of usage (e.g., Uniswap airdropped UNI tokens to early users). Can also refer to unsolicited tokens sent (those might be scams).
+
+- **Altcoin:** Any cryptocurrency that isn’t Bitcoin. Now somewhat outdated as a term since there are so many, but originally meant early alternatives to BTC like Litecoin.
+
+- **AMM (Automated Market Maker):** A type of decentralized exchange mechanism that uses liquidity pools and formulas to enable trading. Replaces order books. E.g., Uniswap’s formula x\*y=k maintains pool balance and prices.
+
+- **ASIC (Application Specific Integrated Circuit):** Specialized mining hardware designed for a specific algorithm (e.g., SHA-256 for Bitcoin). Much more efficient than general-purpose CPUs/GPUs for PoW mining.
+
+- **Block:** A batch of transactions recorded on the blockchain, linked to the previous block via cryptographic hash (forming the “chain”). Miners/validators create new blocks at regular intervals.
+
+- **Block Reward:** New cryptocurrency awarded to miners/validators for creating a block (includes the coinbase/block subsidy and transaction fees). E.g., Bitcoin block reward is currently 6.25 BTC plus fees.
+
+- **Blockchain:** A distributed ledger of records (blocks) that is maintained by a network of computers (nodes) in a decentralized way. Key properties: append-only, tamper-resistant via cryptography and consensus.
+
+- **Bridge:** A connection between two blockchains, allowing transfer of assets or data between them. Often involves locking coins on Chain A and minting representations on Chain B. Can be vulnerable if not trustless.
+
+- **Burn (Token Burn):** Permanently destroying tokens by sending them to an irretrievable address. Often done to reduce supply (e.g., some protocols burn fees).
+
+- **CeFi:** “Centralized Finance,” refers to crypto services run by centralized companies (like exchanges, lending platforms) where users deposit funds with them (e.g., Coinbase, Binance, Celsius).
+
+- **Cold Wallet / Cold Storage:** Keeping cryptocurrency offline (e.g., hardware wallet or paper wallet). Protects keys from online attacks.
+
+- **Consensus Mechanism:** The method by which blockchain nodes agree on the state of the ledger. Examples: Proof of Work (miners solve puzzles), Proof of Stake (validators stake coins), etc.
+
+- **DAO (Decentralized Autonomous Organization):** An organization governed by smart contracts and token holder voting rather than central management. Funds and rules are transparently managed onchain.
+
+- **dApp (Decentralized Application):** An application that runs on a blockchain or P2P network of computers instead of a single server. Often has smart contracts as back-end and a web interface front-end.
+
+- **DeFi (Decentralized Finance):** Blockchain-based financial services without central intermediaries. Examples: decentralized exchanges, lending protocols, stablecoins. Users retain custody of funds while using them.
+
+- **Digital Signature:** A cryptographic way to prove ownership of a private key without revealing it. Used to authorize blockchain transactions. Ensures authenticity (only the key holder could have signed).
+
+- **ERC-20:** The Ethereum token standard for fungible tokens. Defines how tokens behave so they are interoperable with wallets and dApps (transfer, balance, etc. functions).
+
+- **ERC-721:** The Ethereum standard for non-fungible tokens (NFTs). Defines interface for unique tokens with `tokenID` and `ownerOf` etc.
+
+- **EVM (Ethereum Virtual Machine):** The runtime environment for smart contracts on Ethereum and some other chains. It executes compiled Solidity/bytecode instructions. Being EVM-compatible means a chain can run Ethereum contracts.
+
+- **Fork (Blockchain Fork):** A change in blockchain protocol. Can be:
+  - _Soft Fork:_ backward-compatible update where non-upgraded nodes still see new blocks (if most miners upgrade).
+
+  - _Hard Fork:_ non-backward-compatible, causing a split if not everyone upgrades. Could be planned (network upgrade) or unplanned (split into two coins, e.g., Ethereum vs Ethereum Classic).
+
+- **Gas:** Unit of computational work on Ethereum. Transactions require gas; users pay gas fees in ETH. Gas price (in gwei) times gas used \= fee. Limits prevent overuse of resources.
+
+- **Genesis Block:** The first block of a blockchain, from which all others proceed. E.g., Bitcoin’s genesis block contains a famous newspaper headline in its coinbase data.
+
+- **Halving:** Event in some Proof-of-Work coins like Bitcoin where the block reward is cut in half every set number of blocks (Bitcoin halving every \~4 years) to reduce supply inflation.
+
+- **Hash Function:** Algorithm that takes an input and produces a fixed-size string (hash) that looks random. Used in blockchain for linking blocks (each block has hash of previous) and for addresses (public key hashed to address). Key property: one-way (hard to reverse) and collision-resistant (very unlikely two inputs yield same hash).
+
+- **Hash Rate:** The computing power of a Proof-of-Work network (total hashes per second being computed). Higher hash rate \= more secure against attacks. Also refers to a miner’s power.
+
+- **Hot Wallet:** Wallet that is connected to the internet (e.g., mobile app or web wallet). Convenient for frequent use but more vulnerable to hacks.
+
+- **Immutable:** In blockchain context, means once data is recorded in a block and enough blocks have been added after it, it cannot feasibly be changed or removed. Provides ledger integrity.
+
+- **Interoperability:** The ability for different blockchains or systems to communicate and exchange value. Achieved via bridges, cross-chain protocols, or standards. Important for an integrated Web3 ecosystem rather than isolated silos.
+
+- **IPFS (InterPlanetary File System):** A decentralized file storage network. Content is addressed by hash (content-addressable). Often used to store NFT media off-chain (with the hash in NFT’s metadata) so that files are not dependent on one server.
+
+- **KYC (Know Your Customer):** Process of verifying identity of users, required by financial regulations for exchanges, etc. In crypto, centralized services implement KYC to comply with AML laws.
+
+- **Layer 2:** Solutions built on top of Layer 1 blockchains to improve scalability and speed. E.g., rollups on Ethereum (Optimism, Arbitrum) bundle transactions off-chain and post compressed data to L1. Aims to lower fees and increase TPS while inheriting L1 security.
+
+- **Liquidity Pool:** In DeFi AMMs, a smart contract pool containing two (or more) tokens provided by liquidity providers. Traders swap against the pool. Providers earn fees but risk impermanent loss if prices diverge.
+
+- **Mining:** The process in Proof-of-Work where miners use computation to solve hashes (finding a nonce that makes block hash meet difficulty). Winner adds the block and gets block reward.
+
+- **Mnemonic (Seed Phrase):** A human-readable set of 12-24 words that encodes a wallet’s master private key. Used for backup. Anyone with the phrase can derive all associated addresses \-\> keep it secret and safe.
+
+- **Node:** A computer running blockchain software, maintaining a copy of the ledger and relaying transactions/blocks. Full nodes validate all rules. Light nodes/wallets may not store full chain, but query full nodes.
+
+- **NFT (Non-Fungible Token):** A unique digital token that represents ownership of a specific item or asset (art, collectible, in-game item, etc.). Each NFT has distinct ID and metadata. Stored on blockchain (or metadata off-chain with hash onchain). Non-fungible meaning not interchangeable one-to-one like cryptocurrencies are.
+
+- **Oracle:** A service that feeds external (off-chain) data to a blockchain smart contract. Since blockchains can’t directly fetch web data, oracles provide inputs like price feeds, weather, election results, etc., in a trusted manner. E.g., Chainlink oracles update DeFi apps with asset prices.
+
+- **Peer-to-Peer (P2P):** The network design where participants connect directly without central server. Blockchain networks are P2P \- transactions propagate from node to node globally.
+
+- **Private Key:** A secret number that gives control over a blockchain address’s funds (used to sign transactions). Must be kept confidential; if lost, funds are lost; if stolen, funds can be stolen. Often represented via seed phrase or stored in wallet securely.
+
+- **Proof of Stake (PoS):** A consensus mechanism where validators stake coins (lock them up) to secure the network. They are chosen to create blocks proportional to their stake (often randomized). If they misbehave, part of stake can be slashed. More energy-efficient than PoW. Ethereum moved to PoS in 2022\.
+
+- **Proof of Work (PoW):** A consensus mechanism using computational work (hash solving) to secure network. Miners compete by expending electricity; majority of work dictates chain. Ensures security at cost of energy. Bitcoin is PoW.
+
+- **Public Key:** A number derived from private key (via elliptic curve multiplication in Bitcoin/Eth). Public keys can be shared; often hashed to form address. You sign with private key, others verify signature with public key.
+
+- **Rug Pull:** A malicious event where project founders or liquidity providers suddenly withdraw all funds from a project (like removing liquidity from a pool or selling all dev tokens), leaving users with worthless assets.
+
+- **Satoshi:** Smallest unit of Bitcoin (0.00000001 BTC). Also person or group name “Satoshi Nakamoto,” the pseudonymous creator of Bitcoin’s whitepaper.
+
+- **Smart Contract:** A self-executing program on a blockchain that runs when predetermined conditions are met. It can hold and transfer assets based on rules coded. E.g., a smart contract might be a token contract, a DEX, etc. Once deployed, it typically runs as long as chain exists (unless it has self-destruct or upgradeable proxy).
+
+- **Stablecoin:** A cryptocurrency designed to maintain a stable value (often pegged to USD). Types: fiat-collateralized (e.g., USDC, backed by dollars in bank), crypto-collateralized (e.g., DAI, backed by crypto assets with over-collateralization), or algorithmic (seigniorage-style, often partially collateralized or using market incentives). Stablecoins facilitate trading and DeFi by providing a stable unit of account.
+
+- **Solidity:** The main programming language for writing Ethereum smart contracts (similar syntax to JavaScript). Compiles to EVM bytecode. Other languages exist (Vyper, etc.), but Solidity is most used.
+
+- **TPS (Transactions Per Second):** Throughput metric. Bitcoin \~7 TPS, Ethereum \~15 TPS (currently on mainnet), newer chains claim thousands. Layer-2s significantly up effective TPS by bundling many transactions.
+
+- **Transaction Fee (Gas Fee):** The payment users include to incentivize miners/validators to include their transaction. Varies with network demand. In Ethereum, base fee is burned and a tip given to validator (per EIP-1559).
+
+- **Wallet:** Software or hardware that stores your private keys and allows you to send/receive crypto. It doesn’t store coins themselves (they live on blockchain), but gives interface to manage addresses. Types: hardware wallet (e.g. Ledger, Trezor), mobile wallet (e.g. Trust Wallet), browser wallet (e.g. MetaMask). A wallet can hold multiple addresses/keys.
+
+- **Web3:** The vision of a decentralized, blockchain-based internet where users have ownership (coins, tokens) and control of their data/identity. Sometimes specifically refers to interacting with dApps via wallets, etc. (as opposed to Web2 centralized services).
+
+- **Whale:** Slang for an individual or entity with a very large amount of crypto (enough to influence markets or governance). E.g., a Bitcoin whale moves 10,000 BTC.
+
+_(Note: This glossary is not exhaustive but covers many core terms from the course. For more, consider resources like the Ledger Academy Glossary or Investopedia’s crypto section.)_
+
+# **Appendix B: Concept Review Exercises** Test your understanding of key concepts with these review questions and thought exercises. These cover material from various chapters. Discuss your answers with peers or mentors – explaining out loud is a great way to reinforce learning. Answers are not provided here (to encourage you to reason them out\!), but you can find explanations in the text above or resource links if you get stuck.
+
+1. **Internet Evolution:** In your own words, describe the progression from Web1 to Web3. What does “Read-Write-Own” mean, and how does Web3 enable the “Own” aspect for users?
+
+2. **Token Types:** What’s the difference between a fungible token and a non-fungible token? Give an example use case for each (other than currency for fungible, and art for NFT, try to think of another).
+
+3. **Private Keys:** Why is a private key important, and what could happen if someone obtains your private key? Describe two methods to keep private keys safe.
+
+4. **Smart Contracts:** Explain the vending machine analogy for smart contracts. Then, outline a real-world scenario (other than buying a snack) that could be implemented as a smart contract (e.g., a simple insurance payout, escrow for freelance work, etc.).
+
+5. **Blockchain vs Traditional Databases:** Blockchains are often slower and more expensive than normal databases. So, what features or problems justify using a blockchain? List two scenarios where a blockchain is beneficial and two where it’s unnecessary.
+
+6. **DeFi Risks:** Alice deposits ETH into a DeFi lending protocol and earns interest. Name at least three risks she should be aware of (think: smart contract risk, market risk, etc.).
+
+7. **NFT Ownership:** Bob buys an NFT of a digital painting. What does he actually own in legal and practical terms? Can he: (a) prevent others from displaying the image, (b) make prints of the art to sell, (c) recover the art if the hosting site goes down? Discuss based on how NFT metadata and rights typically work.
+
+8. **DAO Decision Making:** Carol is part of a DAO that manages a community treasury. A proposal is up to fund a new project. What factors should Carol consider before voting yes or no? (E.g., project feasibility, alignment with DAO goals, how much to fund vs budget, etc.).
+
+9. **Scaling Solutions:** Explain one approach to scaling blockchain transactions (could be layer-2 rollups, sharding, alternative consensus, etc.) and how it improves throughput or cost.
+
+10. **Composability and Money Legos:** Provide an example of how two DeFi protocols could be combined to create a new product. For instance, what could you build by using both a decentralized exchange and a lending platform together?
+
+11. **Security & Ethics:** Consider a scenario where an exploit is found in a DeFi protocol that could allow an attacker to steal funds, but no one has used it yet. Ethically, what should the discoverer do? (Think about disclosure: inform devs privately vs announce publicly; also consider the immutable nature – maybe the only way to protect funds is alert users to withdraw).
+
+12. **Real-world Blockchain Application:** Pick a non-financial industry (e.g., music, supply chain, voting). Propose one specific problem in that industry that blockchain or Web3 technology might solve, and describe how (one or two paragraphs). Also note any drawbacks or challenges in implementing it.
+
+13. **Web3 vs Web2 for Creators:** Dana is a video content creator with a following on a Web2 platform (e.g., YouTube). She is thinking of releasing content on a Web3 platform. What are two advantages she might gain by using Web3 (consider ownership, monetization) and two challenges she might face (consider audience friction, technical complexity)?
+
+14. **Future Vision:** Envision a day in 2030 where Web3 is mainstream. Describe briefly how an average person might interact with Web3 technologies in daily life (for example: how they prove their identity, purchase things, use social media, etc., using the concepts learned – tokens, wallets, etc.).
+
+15. **Glossary Recall:** Define three of the following terms without looking: DAO, gas fee, private key, stablecoin, oracle, proof of stake, NFT. Give an example or context for each.
+
+Take your time to work through these questions. If some stumped you, revisit the relevant chapters or sources – the goal is to ensure you grasp not just definitions but concepts and reasoning. Discussing with peers or mentors can also provide new insights (maybe start a discussion group with classmates to go over the answers).
+
+Web3 is an evolving journey, and with this foundation and continuous learning, you’ll be well-prepared to navigate and perhaps even build that future. Good luck\!

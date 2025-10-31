@@ -1,0 +1,39 @@
+---
+id: "4.4"
+title: "Identity and Accounts: Platform-Specific vs Self-Sovereign"
+chapter: 4
+chapterTitle: "From Traditional Internet to Web3"
+slug: "identity-accounts"
+order: 4
+estimatedMinutes: 10
+previousLesson: "finance"
+nextLesson: "governance-organization"
+---
+
+On the traditional internet, your identity is fragmented across platforms. You might have a Facebook account, a Google account, a school account, etc. You often use email/password or OAuth login through a big provider. Each platform collects data about you and you have to maintain logins. If one account is banned or data is lost, it doesn’t carry over to others (except those tied to single sign-ons). Also, your identity is usually tied to personally identifiable information (PII) like your email, name, or government ID, which raises privacy issues.
+
+### **👤 FAST FACT:**
+
+The average internet user has over **90 different accounts**. Each one is a silo—controlled by the provider. Forget a password or get banned? That account is gone.
+
+Web3 introduces the concept of **self-sovereign identity (SSI)**. The idea is that you control credentials about yourself and only share what’s needed. In practice right now, your **wallet address** can serve as a pseudonymous identity—you might be known by your address or a nickname linked to it (like an ENS name such as `alice.eth`). You can prove things about your identity by using cryptographic proofs rather than handing over documents. For example, a project could issue you a token that proves you completed a course or achieved a rank, and you can show that token to any other service as proof of that achievement.
+
+### **🧠 DEEP DIVE: ENS (Ethereum Name Service)**
+
+Think of ENS like a **blockchain version of a username** or email address. Instead of `0x3fa...`, you can be `lena.eth`. This identity is yours, portable, and programmable—an address, profile, and brand in one.
+
+Imagine you have a **digital passport** that isn’t issued by a government but perhaps by a trusted network, and contains various verified claims (age, certifications, memberships) all signed by issuers, but you hold it and decide who gets to see which claim. This is what SSI aims for: no central identity provider that can revoke your existence on the internet. Some early implementations use NFTs or tokens as verifiable credentials—for instance, you could have an NFT from a DAO that signals you are a member, and another NFT for a conference ticket, etc. These sit in your wallet, and any app can read them (if public) to grant you access or perks accordingly. Contrast that to Web2, where the conference would have its own registration database and the community forum would separately have to verify you.
+
+Of course, Web3 identity is still an evolving area. Paradoxically, anonymity is easier (you can be just 0x123... with no info), but full identity is harder (proving real-world identity onchain is tricky and sometimes against the desire for privacy). Some projects link real-world IDs to wallets for compliance (like certain regulated exchanges or projects issuing “Soulbound tokens” for KYC’ed users). But generally, Web3 leans towards **aliases**—you might have a reputation tied to an alias that you cultivate over time, with trust earned through onchain actions or community attestations, not necessarily your legal name. This is similar to how on forums or games you could be known by a handle; Web3 just enables carrying that handle and its history across the web.
+
+One neat aspect is **one login for many apps**: If an app allows wallet login, and you have a wallet, you can use it across countless dApps without making new accounts each time. It’s like using Google login, except instead of Google controlling it, _you_ (via your wallet keys) control it. The downside: if someone steals your wallet, they basically compromise your identity everywhere at once—which underscores again the need for securing keys.
+
+### **✍️ MINI PROJECT:**
+
+Design a Web3 profile.
+
+- What wallet name would you use?
+- What tokens or NFTs would prove your memberships or achievements?
+- What info would you choose to keep private?
+
+  Additionally, because identities can hold value (like your tokens, NFTs, etc.), there is a concept of **digital reputation** that is tied to your address. For example, lenders could check your address’s history to see if you’ve ever been liquidated or if you have a lot of collateral, to decide if you’re creditworthy (even if they don’t know your name). DAOs might give more voting weight to addresses that have been around longer or contributed more. In Web2, reputation is often siloed (your eBay seller rating doesn’t automatically transfer to, say, your Amazon account). In Web3, your actions across different services, if linked to one address, build a holistic reputation visible to any future service (this could be both good and bad for privacy).

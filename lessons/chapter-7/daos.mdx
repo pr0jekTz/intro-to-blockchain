@@ -1,0 +1,67 @@
+---
+id: "7.3"
+title: "Decentralized Autonomous Organizations (DAOs)"
+chapter: 7
+chapterTitle: "Web3 Beyond Finance"
+slug: "daos"
+order: 3
+estimatedMinutes: 10
+previousLesson: "self-sovereign-identity"
+nextLesson: "digital-art-nfts"
+---
+
+We touched on DAOs in earlier chapters, but let’s dive deeper. A **DAO** is basically an internet community with a shared bank account and governance rules enforced by smart contracts. Members of a DAO typically hold tokens or some form of weight that lets them vote on proposals. The treasury (funds) of the DAO can only be moved by approved proposals—so spending decisions are crowd-sourced rather than by a CEO or small team. The goal is a more democratic, transparent organization.
+
+### **📊 Analogy: _DAO \= Group Chat \+ Shared Wallet \+ Voting Bot_**
+
+Imagine a Discord group chat with a built-in bank account. Anyone can propose spending funds, and others vote. Only if the group approves does the smart contract release money. That’s the core of a DAO—transparent, programmable group coordination.
+
+DAOs can take many forms:
+
+- **Protocol DAOs:** Many DeFi projects have turned into DAOs. For example, **Uniswap DAO** (holders of UNI token vote on changes like fee switches or grants), **MakerDAO** (MKR holders govern the DAI stablecoin parameters), etc. These essentially replace a management team with token holder governance. They often have committees or sub-DAOs for specific tasks (like risk, oracle, etc., in Maker).
+
+- **Investment DAOs:** Groups that pool capital to invest in projects or NFTs. For instance, **The LAO** is a DAO that invests in startups (like a VC fund but DAO-based). **Flamingo DAO** invests in NFTs. Members share upside. This democratizes venture investing to some extent (though some are tokenized for accredited investors only due to legal reasons, others like BitDAO allocate billions by community vote to invest in ecosystem projects).
+
+- **Social DAOs / Communities:** These are clubs centered around a certain interest or identity. **Friends With Benefits (FWB)** is a well-known social DAO—basically a token-gated online community of creatives and Web3 folks; holding a certain number of $FWB tokens grants access to their Discord, events, etc. The DAO treasury is used for projects the community votes on (like throwing events, or funding member ideas). It’s like a next-gen Soho House meets Reddit vibe. Another is **Bankless DAO** – a community around the Bankless media, trying to spread crypto education, with its own token and content creation funded by the DAO.
+
+- **Service DAOs:** These function like decentralized Upwork or agencies. **Raid Guild** is a collective of Web3 developers and designers who assemble teams to work on projects and get paid via the DAO. **dOrg** is a dev shop DAO legally registered as an LLC, but governed by its members, taking on blockchain dev work. The DAO model allows fluid team formation and profit sharing among contributors.
+
+- **Collector DAOs:** People coming together to collect things, often NFTs or art. **PleasrDAO** for example buys notable NFTs (like the Wu-Tang album Once Upon a Time in Shaolin, famously) collectively, so people own a slice of something they couldn’t afford individually.
+
+- **Blockchain Ecosystem DAOs:** Some blockchains have large DAOs to manage ecosystem funds. For example, **Polkadot’s treasury** (onchain funds that are spent via community governance on proposals) or **Algorand’s community governance** where holders vote on network decisions and earn rewards. These are governance heavy but crucial for decentralized networks to evolve without central leadership.
+
+- **Cause-based DAOs:** Charitable or political DAOs aiming to raise and allocate funds. E.g., **Gitcoin DAO** funds public goods (grants to open-source projects) via quadratic funding votes. **UkraineDAO** in early 2022 pooled crypto donations to aid Ukraine’s war relief. They demonstrate rapid coordination for a cause without a formal charity in the middle (funds go direct where needed, recorded on chain).
+
+  The DAO as a concept makes a group’s operations more transparent (treasury and votes are onchain visible to all). It also can make them more inclusive globally—anyone with an internet connection can join and contribute, potentially earning tokens or voting rights, whereas traditional organizations often require contracts, residency, etc.
+
+  However, DAOs face growing pains:
+
+- **Coordination issues:** Getting a large group to make decisions is slow and can be chaotic. Voter apathy is common (quorum sometimes hard to reach unless incentives or a heavily interested community). Some DAOs devolve to governance by a few active members, which is not much different from centralization. Techniques like quadratic voting or delegation (like how Compound allows you to delegate votes to others if you don’t want to vote on every detail) are used to improve this. Some DAOs form **working groups** where token holders elect a smaller team to handle certain tasks with some budget, to avoid every minor decision going to a full vote. Essentially, they’re rediscovering governance structures like committees, but hopefully with more accountability (committees have charters and can be voted out quickly if they misbehave, since funds are onchain with maybe time-locked allowances).
+
+- **Security:** If a DAO’s treasury is controlled by token votes, someone who accumulates \>50% of tokens (via purchase or exploiting low voter turnout to achieve majority of votes) could potentially pass malicious proposals to drain funds. This has happened in smaller DAOs. So designing safeguards is important (some use multi-sig as a backstop that can veto blatant thefts, but that’s centralizing; others cap how much can be moved per vote; some ensure some review period for the community to react). On the other hand, having everything transparent means the community can notice fishy proposals and rally opposition if aware.
+
+- **Legal status:** DAOs operate in a grey area legally. Some have registered legal entities (Wyoming in the US introduced a DAO LLC law, so you can wrap the DAO in an LLC for limited liability). But many are just informal organizations. This raises questions if they can enter enforceable contracts with real-world entities, or if members could be held personally liable for DAO actions (if seen as a general partnership). This is being worked out; likely there will be more jurisdictions giving DAOs a recognized status to facilitate interaction with the traditional world without losing the core ethos.
+
+- **Inclusivity vs efficiency:** Purely online governance can be dominated by those with more time, louder voices, or more tokens (wealth). Some DAOs, to be inclusive, run education and forums to discuss proposals thoroughly. But to be efficient, they might rely on core contributors. It’s a balancing act akin to any democracy vs bureaucracy trade-off.
+
+### **📌 Sidebar: _DAO Legal Status – Are They Companies?_**
+
+Some DAOs now register as LLCs (like in Wyoming), but many operate without legal identity. This creates a gray zone: Who's liable if something goes wrong? Can DAOs sign contracts? Legal frameworks are evolving, but decentralized governance is testing corporate law itself.
+
+Despite issues, DAOs have achieved impressive feats:
+
+- **ConstitutionDAO** (briefly mentioned earlier): though it failed to buy the Constitution copy, in a week it raised \~$47 million from thousands of people spontaneously. That’s a fundraising and mobilization feat rarely seen in traditional contexts on such short notice. It showed the power of the model for collective action (imagine coordinating that via a traditional org so quickly—near impossible). The fact that donors got their money back after failing (minus Ethereum fees) shows the trust advantage: smart contracts held funds escrowed, which were refundable, unlike if you wired money to a central charity then it fails its goal, can you easily get refunds?
+
+- **MakerDAO** is running something akin to a central bank (managing a stablecoin DAI) with open governance—and it’s largely worked. Maker faced a huge test in March 2020 when markets crashed, and DAI briefly lost its peg due to under-collateralization issues, but the community voted through changes to stabilize it (including adding new collateral types like USDC which was controversial but effective). Now Maker is venturing to invest some of its collateral in traditional assets via votes. It’s slow deliberation but they’ve created a resilient system over years that’s now pretty battle-tested.
+
+- **Uniswap DAO** in 2022 voted to deploy the Uniswap protocol on additional blockchains (Polygon, Celo, etc.), which is interesting because it shows a community governing how widely to extend their service—something a company’s board would normally decide. Uniswap token holders also debated a big $20M fund for user incentives. These decisions shape one of the largest exchanges, all done in public discourse and token votes.
+
+  We might see in the future that people participate in DAOs just as routinely as someone might be part of a club or co-op today. For example, a city could have a local DAO where residents decide on some budget (like a decentralized version of participatory budgeting that some municipalities do). Or a fandom of an artist could form a DAO to commission work they want to see. Or employees of a small company could run it as a DAO where each has equity and votes on major moves (some startups already allocate tokens to employees and token votes for decisions like DAO-like governance). There’s even the concept of a **Network State** that Balaji Srinivasan proposes—essentially a country-as-a-DAO, where people form an online community with shared values, crowdfund land in the physical world to live together, and negotiate with existing nations. It’s far-out but shows how the DAO model challenges how we organize at every scale.
+
+  One accessible manifestation: **Online gaming guilds** are becoming like DAOs. In play-to-earn games (we’ll talk more next section with digital assets), groups like Yield Guild Games pool resources to get expensive in-game NFTs and then let members use them to earn, splitting profits. These guilds operate very much like DAOs with treasuries, governance, and membership rules, but focused on gaming.
+
+  In summary, DAOs show how Web3 can transform collective action—enabling people who may never meet in person to trustingly manage funds and projects together, empowered by transparency and incentives. It’s a living experiment in governance and community-driven enterprise that extends the Web3 principle of user ownership from individuals to groups.
+
+### **🧠 Thought Prompt:**
+
+_If your school, company, or sports team became a DAO, what decisions should be voted on—and by whom?_

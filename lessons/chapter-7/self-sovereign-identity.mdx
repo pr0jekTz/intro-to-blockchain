@@ -1,0 +1,66 @@
+---
+id: "7.2"
+title: "Self-Sovereign Identity (SSI) and Reputation"
+chapter: 7
+chapterTitle: "Web3 Beyond Finance"
+slug: "self-sovereign-identity"
+order: 2
+estimatedMinutes: 10
+previousLesson: "decentralized-social"
+nextLesson: "daos"
+---
+
+Our digital identities today are fragmented and often controlled by others (Facebook login, Google accounts, government IDs used online, etc.). **Self-Sovereign Identity (SSI)** is the idea that individuals should own and control their digital identity, with the ability to selectively share pieces of it when needed. Instead of a company or government storing all your details, you keep your identity data (perhaps in your wallet or a secure personal data store), and you present verifiable claims as necessary.
+
+In Web3, one implementation of SSI uses **Decentralized Identifiers (DIDs)** and **Verifiable Credentials (VCs)**. A DID is like a unique ID for you on a blockchain or decentralized system (it might be derived from keys you control). Verifiable Credentials are digital statements (like “Alice has a driver’s license” or “Bob is an employee of Company X”) signed by issuers (like DMV, or the company). You can hold these credentials and show them to a verifier who can check the signature. Crucially, you could prove certain attributes without revealing all. For example, using zero-knowledge proofs, you could prove “I am over 18” by showing a credential from DMV, without revealing your name or actual birth date.
+
+**📌 Sidebar: _What is a DID?_**
+
+A Decentralized Identifier (DID) functions as a blockchain-based username, offering you complete ownership and control. Unlike logins from platforms such as Google or Facebook, a DID cannot be revoked. It serves as a secure anchor for your credentials, allowing you to prove specific attributes about yourself—like age, educational background, or memberships—without revealing unnecessary personal information.
+
+Web3 identity might combine:
+
+- **Wallet addresses and SuiNS**: The Sui Name Service (SuiNS) allows users to register human-readable names (like `alice.sui`) that link to their Sui wallet address. Much like ENS on Ethereum, SuiNS domains can serve as decentralized identifiers across apps, making wallet interactions more personal and expressive. A name like `brayden.sui` could be tied to your onchain presence, used to receive tokens, display profile information, or even log in to dApps built on Sui. Over time, SuiNS could form the foundation for interoperable digital identities native to the Sui ecosystem — portable, programmable, and owned by the user.
+
+- **Social reputation tokens or NFTs**: Projects like POAP (Proof of Attendance Protocol) give NFTs for attending events (conferences, meetups). Over time, your wallet can accumulate “badges” that show where you’ve been or what communities you’re part of. For instance, having a POAP from Sui Basecamp (an Sui developer conference) might signal you’re an active dev. Or getting an NFT from completing an online course could be onchain resume credentials. These become like a **soulbound token** (a term Vitalik Buterin used for non-transferable achievement tokens) – they build an identity that’s not about money but about accomplishments or affiliations.
+
+- **DAO reputation**: In DAOs, instead of purely coin voting, some experiment with reputation points that are earned by contributions (e.g., points for completing tasks, which can’t be bought). These points can be an identity marker—e.g., you see someone with a high StackExchange reputation and trust their answers more; similarly, if someone’s wallet has a lot of DAO rep tokens, you might trust them in that context.
+
+###
+
+###
+
+### **📋 Table: Real-World SSI Use Cases**
+
+| Use Case              | How SSI Helps                              |
+| --------------------- | ------------------------------------------ |
+| Logging into websites | No passwords—just sign with wallet         |
+| Age verification      | Prove “Over 18” without showing ID         |
+| Credit access         | Show onchain credit reputation securely    |
+| DAO governance        | Prevent vote farming (1 person \= 1 vote)  |
+| Event participation   | Collect badges (POAPs) to prove attendance |
+
+Self-sovereign identity can help with **login** (no need for password, just cryptographic proof from your wallet—“Sign in with Ethereum” is a movement for using your Ethereum account to authenticate across web services, which some Web2 sites even started supporting), with **KYC** (instead of uploading documents to every exchange, you could have a credential proving you’ve been KYC-verified by a trusted provider, then share that credential’s proof with others—so your personal info isn’t sprawled everywhere, you control it), and with **sybil resistance** (proving you’re a unique human across platforms to prevent one person from making 100 fake accounts).
+
+A real project in this space: **BrightID**—it’s a decentralized social graph approach to verify uniqueness. People join video calls or connect with known contacts to vouch that they’re real and unique, and BrightID gives a score that dApps can use to ensure one person \= one account in certain contexts. There’s also **Proof of Humanity** which combines video submission \+ vouching \+ UBI token; and **Gitcoin Passport** which aggregates various proofs (like having social media accounts or past verifications) to give you a trust score. All aim to solve identity in a user-centric way.
+
+**Why is this important for Web3?**
+
+- It can enable **new services** that need identity without sacrificing privacy. For example, a decentralized credit scoring—you could prove certain financial history or attestations to get an undercollateralized loan in DeFi, without revealing your entire identity, solving a big limitation (today DeFi mostly requires over-collateralization because lenders don’t know who borrowers are).
+
+- It makes **DAOs and community governance** more fair—if each human had 1 vote vs whales having many via tokens, that requires knowing who’s human (sybil resistance). Identity systems like previously mentioned can help one-person-one-vote schemes or at least weight voting beyond just token count (Quadratic Voting works best when participants can’t sybil—which SSI can assist with by proving uniqueness).
+
+- It gives **users control** in general. Instead of handing data to big firms, you keep it and only give what’s needed. This reduces data breaches risk too (if, say, your credential is just a signed “Adult: yes” rather than a database storing your birthdate, there’s less honeypot of personal info to hack).
+
+- It can help with **regulatory compliance** in a user-friendly way. For instance, a decentralized exchange could require a proof that “user is not a citizen of country X” without the user revealing who they are or their whole address—done via a credential from a KYC provider that checks nationality but only returns a yes/no credential. The exchange then is more compliant while the user’s privacy is preserved.
+
+**Challenges:**  
+ Adoption is a big one—you need many institutions willing to issue and accept these credentials. There’s momentum: for example, the EU has an initiative for digital identity wallets for citizens, and if they used open standards, that could tie into Web3 nicely. Also, network effects: your decentralized identity is only as useful as the places you can use it. But as more dApps integrate (perhaps to provide personalized experiences or trust scores), and more users realize the benefit (not needing a million passwords or filling forms repeatedly), it could take off.
+
+Another challenge: **privacy vs transparency** on blockchains. If your one wallet does everything, that’s a lot linked to one identity (less privacy). Solutions include having multiple wallets for different contexts (but then linking credentials across them can break anonymity) or using advanced cryptography to prove things across accounts without linking them. For example, you might want to keep your DeFi trading separate from your gaming persona. Self-sovereign doesn’t mean singular identity for all things; you could have multiple DIDs for different roles, yet still anchor them to some master identity privately if needed. It’s a complex but active area of development.
+
+Overall, Web3 identity is about giving people **freedom to manage their online persona** – be as anonymous or as verified as they choose—rather than having identity imposed by login silos or mass surveillance. It complements other Web3 pieces: DAOs (one person, one vote communities), Social (carry your reputation to any new community), and even commerce (imagine personalized offers you control—you could reveal to a DeFi lender that you have a high reputation score to get better terms, etc., like how in Web2 a high eBay rating or LinkedIn resume helps but now you’d port that anywhere).
+
+**🧠 Thought Prompt:**
+
+_Design your pseudonymous resume. What would you prove without revealing your name? Past jobs? Attendance at events? onchain skills?_

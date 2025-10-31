@@ -1,0 +1,45 @@
+---
+id: "8.1"
+title: "Composability – “Money Legos” and Beyond"
+chapter: 8
+chapterTitle: "Emerging Trends"
+slug: "composability"
+order: 1
+estimatedMinutes: 10
+previousLesson: "other-web3-uses"
+nextLesson: "ai-blockchain"
+---
+
+One of the superpowers of Web3 and open protocols is **composability** – this means that different modules or components can easily connect and work together, often in ways the original creators didn’t anticipate. In simpler terms, composability is like having Lego bricks: you can build new structures by combining existing pieces, and everyone has access to the same standard pieces.
+
+### **📌 Sidebar: _What is Composability?_**
+
+Composability means Web3 tools and apps are like digital LEGO blocks. Developers can reuse smart contracts, protocols, or components from other projects without needing to rebuild from scratch. This speeds up innovation—just like how building a house is faster with pre-cut lumber and pre-made bricks.
+
+We’ve already seen this in DeFi: they often call DeFi applications “money Legos”. For example:
+
+- You could take a stablecoin DAI from MakerDAO, supply it to Compound to earn interest, then take the interest-bearing token you get from Compound and trade it on Uniswap for another asset, all automatically. Each step is a different protocol, but they interoperate because they share Ethereum as a base and standards like ERC-20. Developers can chain these actions in a single transaction – this led to innovations like **flash loans** (borrowing and returning within one transaction, enabling arbitrage or complex multi-step trades) which leverage multiple protocols in one go. No one “planned” flash loans at the start; they emerged from composability and creativity.
+
+- Another example: Yearn Finance vaults took advantage of multiple protocols. A Yearn vault might put funds into Curve (a DEX) to earn trading fees, then stake the Curve LP token in Convex (another optimizer) to earn extra rewards. That’s a protocol using two other protocols under the hood, amplifying yield. It’s like stacking Legos to get a taller structure. The interesting part is Yearn didn’t need permission from Curve or Convex to do that; everything is open and contract-based.
+
+Composability isn’t just in DeFi; NFT projects also see it:
+
+- Example: If you own an NFT of a game character, composability could allow that character to be used in a different game that decides to integrate the NFT. We’ve seen small instances: some indie games let you import a CryptoPunk or Ape as a skin in their world. Another: some projects take two NFT collections and let owners “merge” them in creative ways (imagine if you have an NFT from Collection A and one from Collection B, a dApp might let you generate a new NFT that combines traits – without needing both original creators to coordinate, beyond what the open standards allow).
+
+- **Composable NFTs** are being explored – e.g., an NFT that can “hold” other NFTs (like a game avatar NFT that holds weapon NFTs and outfit NFTs). The avatar’s smart contract can have slots for equipment that point to other token IDs. This way, your character NFT is like a backpack for other assets, which is a natural way to represent something like a gaming profile.
+
+Composability essentially lowers the barrier to entry for innovation. A new team can build on existing smart contracts rather than starting from scratch, akin to how open source libraries allow rapid software development. However, it also means **risks can stack**: if one Lego (protocol) has a flaw, and many others are built on it, a lot can topple if that piece breaks. We saw this with something like a stablecoin de-peg affecting multiple protocols that integrated it, etc. So the community is learning to evaluate dependencies (like, is this Lego brick robust? If not, maybe don’t build a tall tower on it yet).
+
+Beyond single blockchain, cross-chain composability is a new frontier: projects like **Polkadot** and **Cosmos** focus on interoperability – allowing different specialized blockchains to connect (Cosmos’s IBC protocol lets chains transfer assets or call functions on each other). That extends composability beyond one ecosystem to an “Internet of Blockchains.” For instance, you could have a trading engine on one chain executing trades with assets that live on another chain via cross-chain message passing. We’re in the early days of that; bridges are initial tools but in future we’ll likely have more seamless cross-chain composability (though bridging security is a concern as we saw with hacks).
+
+Another trending composability concept is **Decentralized Identity and credentials** (we touched on): if you develop a standard for, say, education credentials on blockchain, any app (job sites, networking platforms) can plug into that and verify someone’s credentials easily, instead of siloed verification.
+
+**Morphological Composability** (term from the MoonPay snippet and Ledger quote): basically means because standards exist (like ERC-20 for tokens, ERC-721 for NFTs), any component following those can plug into any other expecting those standards. E.g., any wallet can store any ERC-20 token; any DEX can list any ERC-20 token automatically. That’s morphological composability – following the same shape. This principle will extend beyond tokens: e.g., if multiple metaverse worlds agree on avatar standards, you could teleport your avatar between them.
+
+Looking forward: as more complex things go onchain (like actual program logic, or AI models, etc.), composability might allow things like one dApp using another’s AI service, paying per use in crypto (like a decentralized AWS Lambda services, etc.). Some projects like **Fetch.ai** or **Ocean Protocol** aim for markets where algorithms or data are composable resources any application can tap with proper payment or permissions.
+
+In summary, composability is a major reason Web3 can innovate fast – everything new builds on what’s come before, like remixing in music. It fulfills the “permissionless innovation” ethos: you don’t need to ask any company to integrate with their API (like how in Web2, your app might depend on Twitter API but if Twitter changes terms, you’re stuck). In Web3, if a contract is open and public, it’s like an API that no one can revoke unilaterally – it will continue to operate as long as the chain runs. That reliability plus combinability is extremely powerful.
+
+### **🎯 _Thought Exercise_**
+
+Can you think of a Web2 example where features are "walled off" and can’t be reused in other apps? What would change if those features were modular and open source?

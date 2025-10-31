@@ -1,0 +1,83 @@
+---
+id: "3.4"
+title: "Decentralized Applications (dApps)"
+chapter: 3
+chapterTitle: "Technical Tools of Blockchain"
+slug: "dapps"
+order: 4
+estimatedMinutes: 10
+previousLesson: "smart-contracts"
+nextLesson: "architecture"
+---
+
+Bringing it all together, we have **decentralized applications**, or **dApps** for short. A dApp is an application that runs on a decentralized network like a blockchain, rather than a single centralized server. Typically, a dApp has smart contracts on the backend and a user interface on the frontend (like a website or mobile app) that interacts with those contracts. The aim is to provide a service to users _without_ a central company running the core logic—instead, the logic is encoded in smart contracts on the blockchain. This can provide benefits in security, transparency, and user empowerment (since the dApp’s operations are open and can often be community-governed).
+
+### **🧠 FAST FACT: Not All “Web3” Is Decentralized**
+
+Some dApps use centralized websites but decentralized contracts. The frontend might go down, but the smart contract still lives. That’s why many projects host their frontends on decentralized storage (like IPFS or Arweave).
+
+To users, a dApp might look like any other web or mobile application at first. The difference is under the hood. When you use a dApp, you typically connect your **blockchain wallet** to it. The dApp will request permission to view your public address (to know who you are or what you have), and when you perform actions, the dApp will prompt your wallet to sign transactions. Contrast this with a normal app: when you log into a traditional app, you likely have an account in their database and they perform actions for you behind the scenes when you click buttons. In a dApp, _you_ invoke actions via transactions.
+
+Examples of dApps:
+
+- **Uniswap:** A popular decentralized exchange (for trading tokens) that is essentially a bunch of smart contracts plus a web frontend. When you trade on Uniswap, there’s no centralized order book or company matching your trade; the smart contract itself swaps your tokens according to its algorithm (an automated market maker). You connect your wallet, input trade details, and confirm the transaction—the smart contract handles the rest, and you get the other token in return.
+
+- **Cryptokitties:** One of the first blockchain games, where users could collect and breed digital cats (each represented by an NFT). The game’s breeding logic was in smart contracts. The website served as a user-friendly interface to interact (see your cats, click “breed” or “sell”), but the actual data of ownership and breeding outcome was determined by the contract on the blockchain.
+
+- **Farcaster (decentralized social network):** We’ll talk more about this later, but Farcaster is a Web3 social protocol that lets users own their identity and content across apps. Posts and profiles are stored onchain or in decentralized storage, allowing full control and portability. The interface may resemble a traditional social media feed, but behind the scenes, you’re interacting with decentralized infrastructure. No central platform can delete or monetize your content—your data and social graph belong to you.
+
+The Coinbase definition: _“Decentralized Applications (DApps) are applications that run on blockchain networks, striving to provide enhanced security, transparency, and autonomy.”_.
+
+They are powered by smart contracts and operate on peer-to-peer networks without a central authority. This means dApps ideally **don’t have a single point of failure**. If one node goes down, the app still runs on others. It’s like BitTorrent (for file sharing) versus a single file server—BitTorrent is resilient because many peers share the files. Similarly, a dApp’s backend logic runs on many nodes (the blockchain nodes).
+
+**🧰 BUILDING BLOCKS: What Makes a dApp?**
+
+| Layer              | Description                                          |
+| ------------------ | ---------------------------------------------------- |
+| **Frontend**       | The interface (like a React website or mobile app)   |
+| **Wallet**         | Auth \+ signing tool (e.g., MetaMask)                |
+| **Smart Contract** | Backend logic that lives onchain                     |
+| **Blockchain**     | The network infrastructure and execution environment |
+
+However, note that many dApps still rely on some centralized components, especially for the user interface or certain off-chain data. For example, a dApp’s website could be hosted centrally or on a distributed storage like IPFS. In truly purist terms, a fully decentralized application would have every part (storage, compute, messaging) decentralized. In practice, “dApp” often specifically refers to the blockchain-based logic part, combined with a usually decentralized ethos.
+
+Why use dApps? They offer:
+
+- **Censorship resistance:** No single entity can easily shut it down or censor users (as long as the blockchain itself is running and users have access).
+
+- **Transparency:** Users can inspect the code (smart contracts) and see all transactions, so there’s trust in how it operates.
+
+- **User control:** Through token-based governance or simply through controlling their own data (in their wallet), users have more say and ownership.
+
+- **Composability:** dApps can interact with each other because they’re all on the same public ledger. This is often called the **“money lego”** effect—for instance, one dApp can use another’s smart contracts easily. This composability (more in Chapter 8\) means innovation can be faster—like how many DeFi dApps plug into each other’s services (a lending dApp might use a price feed from another protocol, etc.).
+
+  There are challenges too: dApps can face scaling issues (blockchains can be slower or more expensive per transaction than centralized systems), and user experience hurdles (if a newbie has to figure out wallets and gas fees, that’s a higher barrier than just clicking “Sign up with email”). The technology is improving though, and many newer blockchains aim to support dApps with faster speeds and lower costs to make them more practical.
+
+  From a developer perspective, building a dApp means writing the smart contracts (backend) and then building a frontend that interacts with those contracts (often via libraries like web3.js or ethers.js in the web environment). Users then use their wallet (like MetaMask) to connect to that frontend. It’s a different paradigm from calling an API on a server; instead, you’re composing transactions for the user’s wallet to send to the blockchain.
+
+**✍️ ACTIVITY: Design a Mini dApp**
+
+Sketch an app idea using this format:
+
+- Name of your app: \_\_\_\_\_\_
+- What does it do? \_\_\_\_\_\_
+- What smart contract action does it perform? \_\_\_\_\_\_
+- What tokens or assets does it manage? \_\_\_\_\_\_
+
+  **In summary**, the tech stack of Web3 involves:
+
+- **Private keys:** Your secret credentials that control your blockchain address and assets.
+
+- **Wallets:** Tools to manage those keys and interact with the blockchain (sending transactions, connecting to dApps). They are the bridge between you and the blockchain.
+
+- **Smart contracts:** Pieces of code on the blockchain that implement logic and can manage assets automatically. They enable complex applications to run in a decentralized way.
+
+- **dApps:** The end-user applications that combine smart contracts and interfaces to deliver functionalities (finance, games, social, etc.) without centralized servers.
+
+  These elements work together whenever you “do something” in the blockchain world. Say you want to trade tokens on a DeFi app: you go to the dApp site (frontend), connect your wallet, the dApp prepares a transaction calling a smart contract (swap function), you sign it with your private key via the wallet, and then the smart contract executes and your tokens are swapped. It’s a bit more involved than a one-click Web2 app, but it gives you direct control and transparency at each step.
+
+**🔗 DID YOU KNOW?**
+
+The phrase **“money legos”** refers to how dApps can stack on each other. One lending dApp might use another’s price oracle or yield strategy. Just like APIs in Web2, but composable by default in Web3.
+
+As we move on to comparing Web3 models with traditional models in the next chapter, keep in mind this toolkit – it’s what differentiates how things are built and operated in the decentralized web versus the traditional web.

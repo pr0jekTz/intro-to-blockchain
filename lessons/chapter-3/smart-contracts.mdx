@@ -1,0 +1,57 @@
+---
+id: "3.3"
+title: "Smart Contracts – Code that Runs on the Blockchain"
+chapter: 3
+chapterTitle: "Technical Tools of Blockchain"
+slug: "smart-contracts"
+order: 3
+estimatedMinutes: 10
+previousLesson: "wallets"
+nextLesson: "dapps"
+---
+
+The term **smart contract** might be confusing at first—it’s not really like a legal contract you sign with pen and paper. A smart contract is basically a **program or script stored on a blockchain** that executes specific actions when certain conditions are met. You can think of it as a little robot lawyer or an automated set of rules: “If X happens, then do Y.” What makes it special is that it runs on the blockchain, so it’s executed in a decentralized way by all the nodes, and its outcome is tamper-proof and transparent. Once deployed, a smart contract will always run exactly as programmed.
+
+A classic analogy for smart contracts (as given by Nick Szabo, who coined the term in the 1990s) is a **vending machine**. A vending machine is like a simple contract: you put in $1.50 and press E7, the machine is coded to drop a soda can if the correct amount is deposited. There’s no human cashier—it’s automatic based on the conditions (money input, selection input). If the conditions aren’t met (wrong price, out of stock), it won’t dispense. In the same way, a smart contract on a blockchain could be something like “if someone sends 1 Ether to this contract, then the contract will automatically send back 100 XYZ tokens to the sender” – a simple token sale logic. Or “if time reaches Jan 1, 2030, release these funds to Bob.” The idea is, it doesn’t require any person or company to intermediate once it’s set up. The code itself is the **agreement** and execution engine.
+
+Smart contracts are the **building blocks of decentralized applications (dApps)**, which we’ll cover next. They enable all sorts of use cases beyond simple cryptocurrency transfers. For example:
+
+- In **DeFi**, smart contracts enable decentralized exchanges (you trade tokens through a contract’s logic instead of a company’s order book) and lending protocols (you deposit collateral into a smart contract, and it automatically manages loans, interest, and collateralization).
+
+- In **NFT marketplaces**, a smart contract might automatically transfer ownership of an NFT to the buyer once the payment is received, and even give a cut to the original artist as royalty.
+
+- In **games**, smart contracts define the rules for how an in-game item is created or traded.
+
+- In **social platforms**, a smart contract might handle governance votes (tallying votes from governance tokens and executing the decision if quorum reached).
+
+- In **supply chain**, a smart contract could track a product’s journey and automatically release payment to a supplier once delivery is confirmed (with IoT sensors feeding data, perhaps).
+
+  A smart contract is typically written in a programming language specific to the blockchain (for example, Ethereum’s popular language is Solidity, while the Sui blockchain uses Move—which we’ll mention in the case study chapter). Developers write the code, test it, then **deploy** it to the blockchain. Deploying means the code gets an address on the blockchain and becomes publicly accessible. From then on, anyone can interact with it by sending transactions. If you interact with a smart contract, it’s kind of like calling a function on a remote server—except the “server” is the entire blockchain network executing the code and reaching consensus on the outcome.
+
+### **🧠 DEEP DIVE: What Can Smart Contracts Do?**
+
+- Lock funds until a condition is met
+- Enforce royalties for creators
+- Tally votes in DAOs
+- Create new tokens
+- Run games, lotteries, even entire banks (DeFi)
+
+  One powerful aspect: **Smart contracts are autonomous and transparent**. Autonomous, because once launched, they run as coded without needing their creator. Transparent, because on public blockchains like Ethereum, the code of the contract is visible to anyone, and all interactions with it are public. This transparency can build trust: for instance, users can verify that an algorithm has no hidden backdoors since the code is open. However, it also means any bugs or mistakes in the code are visible—and unfortunately, can be exploited. There have been cases of poorly written smart contracts being hacked, because the code did something unintended and malicious users took advantage. So, writing secure smart contracts is a big deal (imagine a vending machine that accidentally dispenses free soda if you press a certain sequence of buttons—if that flaw is known, people will exploit it). We’ll talk about security later in risks.
+
+  To call a smart contract’s function, you typically send a transaction to its address with the necessary info (parameters and possibly some payment). The network miners/validators run the code, and the result could be transferring tokens, changing some data in the contract’s storage, or calling another contract, etc. All of this happens in a single **transaction** that either completely succeeds or fails (this all-or-nothing property is useful—e.g., if any step fails, the whole thing reverts, so partial execution doesn’t leave things in a weird state).
+
+  Smart contracts often maintain their own **state**. For example, a contract might keep track of a token balances mapping (that’s how new tokens are implemented—the contract itself tracks who has what balance, and the rules for transferring them). In effect, custom tokens like ERC-20 are smart contracts that assign balances to addresses and enforce transfer rules. NFTs are often smart contracts that maintain a registry of ownership of unique item IDs. A DAO might be a set of contracts that collectively manage a treasury and voting. The possibilities are endless—which is why blockchains like Ethereum are called **platforms** or **world computers**, allowing developers to create many types of applications on one shared blockchain.
+
+  In short, **smart contracts are to blockchain what apps are to a smartphone**. They provide functionality and logic. But unlike apps on your phone, smart contracts are decentralized—they run across the whole network and their “state” lives on the blockchain. When you hear buzzwords like “DeFi” or “NFTs” or “DAO”, behind each of those are smart contracts doing the work. They are “smart” because they can hold and manage assets based on programmed conditions, and “contracts” because they often encode business logic or agreements between parties (like a financial contract that pays interest, or a rental contract that releases a digital asset after a period). IBM’s definition captures it: _smart contracts are digital contracts stored on a blockchain that automatically execute when predetermined terms and conditions are met_.
+
+  One cool property: smart contracts enable **trustless interactions**. If you and I want to bet on something (say the outcome of a sports game), we could each put money into a smart contract that is programmed to pay it all to whoever’s team wins (perhaps using an oracle to get the result). We don’t have to trust each other to pay up; the contract holds the stakes and automatically pays the winner. This kind of arrangement, without a trusted middleman, is what people mean by “removing trust” or “trustless” (really meaning you trust the code and network instead of a person).
+
+### **🧪 SCENARIO: If/Then Logic in Action**
+
+Let’s say you’re designing a scholarship app. You write a smart contract that:
+
+- Checks if a student submitted all paperwork
+- Checks if GPA \> 3.5
+- If both true, releases $1,000 in stablecoins to their wallet
+
+No admin needed. It’s just math \+ code \+ consensus.

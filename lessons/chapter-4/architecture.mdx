@@ -1,0 +1,43 @@
+---
+id: "4.1"
+title: "Architecture: Centralized vs Decentralized Networks"
+chapter: 4
+chapterTitle: "From Traditional Internet to Web3"
+slug: "architecture"
+order: 1
+estimatedMinutes: 10
+previousLesson: "dapps"
+nextLesson: "data-ownership"
+---
+
+The traditional internet we use daily is built on a mostly **client-server model**. This means when you use a service (say YouTube or Gmail), your device (client) communicates with servers owned by that company. Those servers do the heavy lifting—storing data, running code, sending results to you. This model has a **central point**—the company’s server—which provides efficiency and control. However, it’s also a single point of failure (if the server goes down, the service goes down) and a single point of control (the operator can change or access anything on the server).
+
+In contrast, Web3 applications aim for a **decentralized network** architecture. Instead of one server, you have many nodes (computers) collectively maintaining the service. In a blockchain like Ethereum, thousands of nodes around the world each keep a copy of the ledger and execute smart contracts. There isn’t a single server that can be turned off to stop the service—you’d have to shut down a majority of the network to have an effect. This makes the system more robust and **resistant to censorship or downtime**. For example, if one country or company hosting some nodes goes offline, the network can still run via nodes elsewhere.
+
+### **🧠 DEEP DIVE: Why “Decentralized” Matters**
+
+In a decentralized network, even if dozens or hundreds of nodes go offline, the system survives. This is what kept **Bitcoin** running during country-wide bans, and why **Ethereum** can upgrade itself through global coordination without downtime.
+
+A simple way to visualize this is:
+
+- **Centralized:** A hub-and-spoke diagram. All users (spokes) connect to one central hub (server). If the hub fails, everything fails.
+
+- **Decentralized (and distributed):** A network mesh. Users (and possibly servers too) interconnect. Information and tasks are spread out. No single point controls all flows. Even if some nodes fail, others can pick up the slack.
+
+  In practice, today’s Web3 relies on blockchains (fully decentralized for consensus) and often distributed storage networks (like IPFS or Arweave) for storing files. The goal is that even if, say, the original web host of a dApp’s interface goes down, users could retrieve it from IPFS and keep interacting with the blockchain contracts. It’s about eliminating the “single point of failure” as much as possible.
+
+**📊 COMPARISON TABLE: Centralized vs Decentralized Infrastructure**
+
+| Feature       | Centralized Internet (Web2)      | Decentralized Web (Web3)              |
+| ------------- | -------------------------------- | ------------------------------------- |
+| Data Location | Stored on company servers        | Stored across many nodes              |
+| Downtime Risk | Single point of failure          | Fault-tolerant through redundancy     |
+| Control       | Central authority (admins, CEOs) | Distributed control (miners, stakers) |
+| Example       | Google Search                    | Ethereum, IPFS                        |
+
+This architectural difference leads to trade-offs: decentralized networks can be slower (because many nodes must process things instead of one fast server) and have redundancy (lots of copies of the same data \= more storage use). But they gain in **fault tolerance** (no single failure breaks it) and **open access** (anyone can join as a node or user without needing permission).
+
+**✍️ STUDENT PROMPT:**
+
+Can you think of a time when a website or service you used was offline due to server failure?  
+ What would change if that service had been decentralized?
